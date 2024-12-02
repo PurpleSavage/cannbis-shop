@@ -1,0 +1,46 @@
+
+.container {
+  height: 140px;
+  display: flex;
+  justify-content:center;
+}
+
+.rotate {
+  overflow: hidden;
+}
+.word {
+  display: block;
+  height: 100%;
+  color: #ae00ff;
+  animation: rotate_words 8s infinite;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+@keyframes rotate_words {
+  10% {
+    transform: translateY(-75%);
+  }
+  25% {
+    transform: translateY(-79%);
+  }
+  35% {
+    transform: translateY(-176%);
+  }
+  50% {
+    transform: translateY(-180%);
+  }
+  60% {
+    transform: translateY(-275%);
+  }
+  75% {
+    transform: translateY(-280%);
+  }
+  85% {
+    transform: translateY(-373%);
+  }
+  100% {
+    transform: translateY(-380%);
+  }
+}
+
