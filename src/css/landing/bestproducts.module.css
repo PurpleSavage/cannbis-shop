@@ -1,0 +1,24 @@
+.firstBackgroundImage{
+    background-image: url('/img/mock-2.avif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.secondBackgroundImage{
+    background-image: url('/img/mock-4.avif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.gradient{
+    background: linear-gradient(180deg, rgba(6, 6, 6, 1) 20%, rgba(6, 6, 6, 0.1) 50%, rgba(6, 6, 6, 1) 80%);
+}
+.gradien90{
+    background: linear-gradient(90deg, rgba(6, 6, 6, .5) 20%, rgba(6, 6, 6, 0.2) 50%, rgba(6, 6, 6, .5) 80%);
+}
+.maskImage{
+    mask-image: linear-gradient(black 80%,transparent);
+}
+.radialgradient{
+    background: radial-gradient(93% 81% at 50% 100%, #003621 0%, rgb(0, 0, 0) 100%)
+}

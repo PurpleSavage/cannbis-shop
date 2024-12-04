@@ -11,7 +11,7 @@
 .word {
   display: block;
   height: 100%;
-  color: #ae00ff;
+  color: rgb(34 197 94);;
   animation: rotate_words 8s infinite;
   font-weight: 600;
   font-size: 80px;

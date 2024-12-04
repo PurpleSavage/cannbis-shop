@@ -1,0 +1,32 @@
+.maskImage{
+    mask-image: linear-gradient(black 80%,transparent);
+}
+.radialgradient{
+    background: radial-gradient(93% 81% at 50% 100%, #003621 0%, rgb(0, 0, 0) 100%)
+}
+.firstGrid{
+    background-image: url('/img/red.webp');
+    background-repeat: no-repeat;
+    background-position: center 40%;
+    background-size: cover;
+}
+.secondGrid{
+    background-image: url('/img/mock-6.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.fourthGrid{
+    background-image: url('/img/mock-8.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.fifthGrid{
+    background-image: url('/img/mock-8.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
