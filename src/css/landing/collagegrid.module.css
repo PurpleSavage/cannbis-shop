@@ -25,8 +25,8 @@
     background-size: cover;
 }
 .fifthGrid{
-    background-image: url('/img/mock-8.avif');
+    background-image: url('/img/moon.gif');
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: 30%;
 }
