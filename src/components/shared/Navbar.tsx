@@ -4,7 +4,7 @@ import OptionsNavigation from "./OptionsNavigation";
 
 export default function Navbar() {
   return (
-    <nav className="flex py-4 px-12 items-center">
+    <nav className="sticky top-0 z-50 bg-black flex py-4 px-12 items-center">
         <div className="flex gap-2 ">
             <GiChemicalBolt size={20} color="white" />
             <span className="block tracking-widest font-bold px-6">Elixir</span>

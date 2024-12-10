@@ -1,0 +1,5 @@
+.gridArea{
+    display: grid;
+    grid-template-areas: "categories main shopcard";
+    grid-template-columns: 25% 1fr 25%;
+}
