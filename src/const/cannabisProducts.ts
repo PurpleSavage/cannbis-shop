@@ -72,8 +72,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
       },
       {
         id: "8",
-        title: "https://images.leafly.com/flower-images/pineapple-express.png?auto=compress%2Cformat&w=350&dpr=1",
-        url: "/img/pineapple-express.png",
+        title: "Pineaple express",
+        url: "https://images.leafly.com/flower-images/pineapple-express.png?auto=compress%2Cformat&w=350&dpr=1g",
         typeStrain: "Feminized",
         geneticOrigin: "Trainwreck x Hawaiian",
         type: "Sativa 60%, Indica 40%",

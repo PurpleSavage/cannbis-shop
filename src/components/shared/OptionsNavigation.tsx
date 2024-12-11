@@ -3,7 +3,6 @@ import Link from "next/link"
 import { usePathname } from 'next/navigation'
 export default function OptionsNavigation() {
     const pathname = usePathname()
-    console.log(pathname)
   return (
     <div className="grow flex gap-10 items-center justify-center ">
         <Link href="/" className={`${pathname ==='/'? "text-green-600":" text-white"} hover:text-green-600 font-medium`}
