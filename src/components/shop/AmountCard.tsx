@@ -1,6 +1,6 @@
 
 
-export default function ShopCard() {
+export default function AmountCard() {
   return (
     <>
         <h2 className="text-4xl underline-offset-8 underline">Products</h2>

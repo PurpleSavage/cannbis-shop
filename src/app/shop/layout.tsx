@@ -1,8 +1,7 @@
 import { Metadata } from "next";
 import Categories from "@/components/shop/Categories";
-import ShopCard from "@/components/shop/ShopCard";
 import styles from '../../css/shop/shop.module.css'
-
+import AmountCard from "@/components/shop/AmountCard";
 
 
 export const metadata: Metadata = {
@@ -28,7 +27,7 @@ export default function ShopLayout({
           </section>
           <section className="sticky top-24 [grid-area:shopcard] self-start shadow-inner shadow-gray-500/50 py-8 px-10 
           rounded-lg space-y-4">
-            <ShopCard/>
+            <AmountCard/>
           </section>
       </div>
     );

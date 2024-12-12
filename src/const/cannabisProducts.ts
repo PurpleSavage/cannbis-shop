@@ -1,5 +1,5 @@
-import { ProductI } from "@/models/product.model"
-export const CANNABIS_PRODUCTS:ProductI[]=[
+import { CannabisProductI } from "@/models/product.model"
+export const CANNABIS_PRODUCTS:CannabisProductI[]=[
     {
         id: "1",
         title: "Critical kush",
@@ -8,7 +8,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Critical x OG Kush",
         type: "Sativa 20%, Indica 80%",
         effect: "Long-lasting, Potent, Body Relaxation",
-        aroma: "Fruity, Intense, Pine, Earthy"
+        aroma: "Fruity, Intense, Pine, Earthy",
+        price:30
       },
       {
         id: "2",
@@ -18,7 +19,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Blueberry x Haze",
         type: "Sativa 60%, Indica 40%",
         effect: "Euphoric, Uplifting, Creative",
-        aroma: "Sweet, Berry, Earthy"
+        aroma: "Sweet, Berry, Earthy",
+        price:30
       },
       {
         id: "3",
@@ -28,7 +30,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Afghani x Thai",
         type: "Indica 90%, Sativa 10%",
         effect: "Calming, Sleep-inducing, Pain Relief",
-        aroma: "Spicy, Earthy, Pine"
+        aroma: "Spicy, Earthy, Pine",
+        price:40
       },
       {
         id: "4",
@@ -38,7 +41,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Brazilian x South Indian",
         type: "Sativa 50%, Indica 50%",
         effect: "Relaxing, Euphoric, Balanced",
-        aroma: "Citrus, Woody, Earthy"
+        aroma: "Citrus, Woody, Earthy",
+        price:50
       },
       {
         id: "5",
@@ -48,7 +52,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Chem’s Sister x Chocolate Diesel",
         type: "Sativa 40%, Indica 60%",
         effect: "Potent, Couch-lock, Euphoric",
-        aroma: "Earthy, Pine, Sour"
+        aroma: "Earthy, Pine, Sour",
+        price:20
       },
       {
         id: "6",
@@ -58,7 +63,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Colombian x Thai x Afghani x Mexican",
         type: "Sativa 65%, Indica 35%",
         effect: "Creative, Relaxed, Uplifted",
-        aroma: "Skunky, Spicy, Sweet"
+        aroma: "Skunky, Spicy, Sweet",
+        price:60
       },
       {
         id: "7",
@@ -68,7 +74,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Haze x Afghani x Thai",
         type: "Sativa 80%, Indica 20%",
         effect: "Energetic, Uplifting, Happy",
-        aroma: "Lemon, Citrus, Earthy"
+        aroma: "Lemon, Citrus, Earthy",
+        price:30
       },
       {
         id: "8",
@@ -78,7 +85,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Trainwreck x Hawaiian",
         type: "Sativa 60%, Indica 40%",
         effect: "Uplifting, Energetic, Creative",
-        aroma: "Pineapple, Sweet, Tropical"
+        aroma: "Pineapple, Sweet, Tropical",
+        price:15
       },
       {
         id: "9",
@@ -88,7 +96,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Chemdawg x Lemon Thai x Pakistani Kush",
         type: "Sativa 25%, Indica 75%",
         effect: "Relaxing, Happy, Euphoria",
-        aroma: "Earthy, Pine, Citrus"
+        aroma: "Earthy, Pine, Citrus",
+        price:40
       },
       {
         id: "10",
@@ -98,7 +107,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Chemdawg x Super Skunk",
         type: "Sativa 90%, Indica 10%",
         effect: "Energetic, Euphoric, Creative",
-        aroma: "Diesel, Citrus, Herbal"
+        aroma: "Diesel, Citrus, Herbal",
+        price:30
       },
       {
         id: "11",
@@ -108,7 +118,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Purple Thai x Haze",
         type: "Sativa 70%, Indica 30%",
         effect: "Euphoric, Energetic, Uplifted",
-        aroma: "Sweet, Spicy, Grape"
+        aroma: "Sweet, Spicy, Grape",
+        price:15
       },
       {
         id: "12",
@@ -118,7 +129,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Skunk #1 x Unknown",
         type: "Sativa 65%, Indica 35%",
         effect: "Energetic, Happy, Focused",
-        aroma: "Fruity, Citrus, Earthy"
+        aroma: "Fruity, Citrus, Earthy",
+        price:25
       },
       {
         id: "13",
@@ -128,7 +140,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "South African Landrace",
         type: "Sativa 100%",
         effect: "Energetic, Focused, Uplifting",
-        aroma: "Sweet, Spicy, Pine"
+        aroma: "Sweet, Spicy, Pine",
+        price:25
       },
       {
         id: "14",
@@ -138,7 +151,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Unknown Haze x Strawberry Fields",
         type: "Sativa 80%, Indica 20%",
         effect: "Happy, Energetic, Uplifting",
-        aroma: "Strawberry, Sweet, Fruity"
+        aroma: "Strawberry, Sweet, Fruity",
+        price:25
       },
       {
         id: "15",
@@ -148,7 +162,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Bubble Gum x Kush",
         type: "Indica 80%, Sativa 20%",
         effect: "Relaxing, Euphoric, Calming",
-        aroma: "Sweet, Berry, Earthy"
+        aroma: "Sweet, Berry, Earthy",
+        price:45
       },
       {
         id: "16",
@@ -158,7 +173,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Mexican x Thai x Afghani",
         type: "Sativa 70%, Indica 30%",
         effect: "Creative, Happy, Relaxed",
-        aroma: "Citrus, Pine, Earthy"
+        aroma: "Citrus, Pine, Earthy",
+        price:55
       },
       {
         id: "17",
@@ -168,7 +184,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Haze x Northern Lights #5 x Shiva Skunk",
         type: "Sativa 55%, Indica 45%",
         effect: "Happy, Creative, Uplifting",
-        aroma: "Pine, Spicy, Sweet"
+        aroma: "Pine, Spicy, Sweet",
+        price:50
       },
       {
         id: "18",
@@ -178,7 +195,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Skunk #1 x Afghan",
         type: "Indica 80%, Sativa 20%",
         effect: "Relaxing, Euphoric, Hungry",
-        aroma: "Cheese, Earthy, Pungent"
+        aroma: "Cheese, Earthy, Pungent",
+        price:50
       },
       {
         id: "19",
@@ -188,7 +206,8 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Skunk #1 Phenotype",
         type: "Sativa 60%, Indica 40%",
         effect: "Energetic, Happy, Focused",
-        aroma: "Lemon, Citrus, Skunky"
+        aroma: "Lemon, Citrus, Skunky",
+        price:50
       },
       {
         id: "20",
@@ -198,6 +217,7 @@ export const CANNABIS_PRODUCTS:ProductI[]=[
         geneticOrigin: "Afghani x Thai x Purple Thai",
         type: "Indica 80%, Sativa 20%",
         effect: "Relaxing, Happy, Euphoric",
-        aroma: "Berry, Sweet, Earthy"
+        aroma: "Berry, Sweet, Earthy",
+        price:60
       }
 ]

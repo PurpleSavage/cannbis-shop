@@ -1,8 +1,11 @@
 'use client'
 import Link from "next/link"
 import { usePathname } from 'next/navigation'
+import { BsCartPlusFill } from "react-icons/bs";
+
+
 export default function OptionsNavigation() {
-    const pathname = usePathname()
+  const pathname = usePathname()
   return (
     <div className="grow flex gap-10 items-center justify-center ">
         <Link href="/" className={`${pathname ==='/'? "text-green-600":" text-white"} hover:text-green-600 font-medium`}
@@ -10,7 +13,7 @@ export default function OptionsNavigation() {
         <Link href="/shop" className={`${pathname ==='/shop'? "text-green-600":" text-white"} hover:text-green-600 font-medium`}
         >Shop</Link>
         <Link href="/cart" className={`${pathname ==='/cart'? "text-green-600":" text-white"} hover:text-green-600 font-medium`}
-        >Shopping cart</Link>
+        ><BsCartPlusFill /></Link>
     </div>
   )
 }
