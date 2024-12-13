@@ -37,7 +37,7 @@ export const useCartStore = create<CartState>()(
           set((state) => {
             const porductExist = get().checkProductInList(product)
             if(!porductExist){
-              const updatedCart = [...state.listCart, {...product,quantity:0}];
+              const updatedCart = [...state.listCart, product];
               const updatedTotalAmount = get().getTotalAmount(updatedCart);
               const updatedTotalProducts = updatedCart.length;
 

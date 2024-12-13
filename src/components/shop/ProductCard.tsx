@@ -11,7 +11,7 @@ interface ProductCardProps {
 export default function ProductCard({product}:ProductCardProps) {
     const addToCart= useCartStore(state=>state.addToCart)
     const addProduct =()=>{
-        addToCart(product)
+        addToCart({...product, quantity:0})
     }
     
   return (
