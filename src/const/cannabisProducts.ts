@@ -9,7 +9,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 20%, Indica 80%",
         effect: "Long-lasting, Potent, Body Relaxation",
         aroma: "Fruity, Intense, Pine, Earthy",
-        price:30
+        price:30,
+        category:'cannabis'
       },
       {
         id: "2",
@@ -20,7 +21,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 60%, Indica 40%",
         effect: "Euphoric, Uplifting, Creative",
         aroma: "Sweet, Berry, Earthy",
-        price:30
+        price:30,
+        category:'cannabis'
       },
       {
         id: "3",
@@ -31,7 +33,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Indica 90%, Sativa 10%",
         effect: "Calming, Sleep-inducing, Pain Relief",
         aroma: "Spicy, Earthy, Pine",
-        price:40
+        price:40,
+        category:'cannabis'
       },
       {
         id: "4",
@@ -42,7 +45,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 50%, Indica 50%",
         effect: "Relaxing, Euphoric, Balanced",
         aroma: "Citrus, Woody, Earthy",
-        price:50
+        price:50,
+        category:'cannabis'
       },
       {
         id: "5",
@@ -53,7 +57,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 40%, Indica 60%",
         effect: "Potent, Couch-lock, Euphoric",
         aroma: "Earthy, Pine, Sour",
-        price:20
+        price:20,
+        category:'cannabis'
       },
       {
         id: "6",
@@ -64,7 +69,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 65%, Indica 35%",
         effect: "Creative, Relaxed, Uplifted",
         aroma: "Skunky, Spicy, Sweet",
-        price:60
+        price:60,
+        category:'cannabis'
       },
       {
         id: "7",
@@ -75,7 +81,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 80%, Indica 20%",
         effect: "Energetic, Uplifting, Happy",
         aroma: "Lemon, Citrus, Earthy",
-        price:30
+        price:30,
+        category:'cannabis'
       },
       {
         id: "8",
@@ -86,7 +93,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 60%, Indica 40%",
         effect: "Uplifting, Energetic, Creative",
         aroma: "Pineapple, Sweet, Tropical",
-        price:15
+        price:15,
+        category:'cannabis'
       },
       {
         id: "9",
@@ -97,7 +105,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 25%, Indica 75%",
         effect: "Relaxing, Happy, Euphoria",
         aroma: "Earthy, Pine, Citrus",
-        price:40
+        price:40,
+        category:'cannabis'
       },
       {
         id: "10",
@@ -108,7 +117,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 90%, Indica 10%",
         effect: "Energetic, Euphoric, Creative",
         aroma: "Diesel, Citrus, Herbal",
-        price:30
+        price:30,
+        category:'cannabis'
       },
       {
         id: "11",
@@ -119,7 +129,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 70%, Indica 30%",
         effect: "Euphoric, Energetic, Uplifted",
         aroma: "Sweet, Spicy, Grape",
-        price:15
+        price:15,
+        category:'cannabis'
       },
       {
         id: "12",
@@ -130,7 +141,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 65%, Indica 35%",
         effect: "Energetic, Happy, Focused",
         aroma: "Fruity, Citrus, Earthy",
-        price:25
+        price:25,
+        category:'cannabis'
       },
       {
         id: "13",
@@ -141,7 +153,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 100%",
         effect: "Energetic, Focused, Uplifting",
         aroma: "Sweet, Spicy, Pine",
-        price:25
+        price:25,
+        category:'cannabis'
       },
       {
         id: "14",
@@ -152,7 +165,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 80%, Indica 20%",
         effect: "Happy, Energetic, Uplifting",
         aroma: "Strawberry, Sweet, Fruity",
-        price:25
+        price:25,
+        category:'cannabis'
       },
       {
         id: "15",
@@ -163,7 +177,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Indica 80%, Sativa 20%",
         effect: "Relaxing, Euphoric, Calming",
         aroma: "Sweet, Berry, Earthy",
-        price:45
+        price:45,
+        category:'cannabis'
       },
       {
         id: "16",
@@ -174,7 +189,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 70%, Indica 30%",
         effect: "Creative, Happy, Relaxed",
         aroma: "Citrus, Pine, Earthy",
-        price:55
+        price:55,
+        category:'cannabis'
       },
       {
         id: "17",
@@ -185,7 +201,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 55%, Indica 45%",
         effect: "Happy, Creative, Uplifting",
         aroma: "Pine, Spicy, Sweet",
-        price:50
+        price:50,
+        category:'cannabis'
       },
       {
         id: "18",
@@ -196,7 +213,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Indica 80%, Sativa 20%",
         effect: "Relaxing, Euphoric, Hungry",
         aroma: "Cheese, Earthy, Pungent",
-        price:50
+        price:50,
+        category:'cannabis'
       },
       {
         id: "19",
@@ -207,7 +225,8 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Sativa 60%, Indica 40%",
         effect: "Energetic, Happy, Focused",
         aroma: "Lemon, Citrus, Skunky",
-        price:50
+        price:50,
+        category:'cannabis'
       },
       {
         id: "20",
@@ -218,6 +237,7 @@ export const CANNABIS_PRODUCTS:CannabisProductI[]=[
         type: "Indica 80%, Sativa 20%",
         effect: "Relaxing, Happy, Euphoric",
         aroma: "Berry, Sweet, Earthy",
-        price:60
+        price:60,
+        category:'cannabis'
       }
 ]

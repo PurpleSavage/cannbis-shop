@@ -10,7 +10,7 @@ export default function OptionsNavigation() {
   return (
     <div className="grow flex gap-10 items-center justify-center ">
         <Link href="/" className={`${pathname ==='/'? "text-green-600":" text-white"} hover:text-green-600 font-medium`}
-        >Home</Link>
+        >Home</Link> 
         <Link href="/shop" className={`${pathname ==='/shop'? "text-green-600":" text-white"} hover:text-green-600 font-medium`}
         >Shop</Link>
         <Link href="/cart" className={`p-2 rounded-lg relative  ${styles.radialGradient} border

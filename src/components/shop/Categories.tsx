@@ -9,15 +9,18 @@ export default function Categories() {
         <ul className="space-y-4 ">
             <li>
               <Link href="/shop" className={`underline-offset-4
-                ${pathname ==='/shop'?"underline decoration-green-600":""}`}>Cannabis</Link>
+                ${pathname ==='/shop'?"underline decoration-green-600":""}`}
+              >{pathname==='/shop'? "🔥":""} Cannabis</Link>
             </li>
             <li>
               <Link href="/shop/others" className={`underline-offset-4
-                ${pathname ==='/shop/others'?"underline decoration-green-600":""}`}>Vapes</Link>
+                ${pathname ==='/shop/others'?"underline decoration-green-600":""}`}
+              >{pathname==='/shop/others'? "🔥":""} Vapes</Link>
             </li>
             <li>
               <Link href="/shop/vapes" className={`underline-offset-4
-                ${pathname ==='/shop/vapes'?"underline decoration-green-600":""}`}>others</Link>
+                ${pathname ==='/shop/vapes'?"underline decoration-green-600":""}`}
+              >{pathname==='/shop/vapes'? "🔥":""} others</Link>
             </li>
         </ul>
     </>

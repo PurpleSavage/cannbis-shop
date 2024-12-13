@@ -25,23 +25,34 @@ export const useCartStore = create<CartState>()(
           totalAmount: 0,
           totalProducts: 0,
         },
+
+
+
         getTotalAmount:(list)=>{
           return list.reduce((total, item)=>total+item.price,0)
         },
+
+
         addToCart: (product) =>
           set((state) => {
-            const updatedCart = [...state.listCart, {...product,quantity:0}];
-            const updatedTotalAmount = get().getTotalAmount(updatedCart);
-            const updatedTotalProducts = updatedCart.length;
+            const porductExist = get().checkProductInList(product)
+            if(!porductExist){
+              const updatedCart = [...state.listCart, {...product,quantity:0}];
+              const updatedTotalAmount = get().getTotalAmount(updatedCart);
+              const updatedTotalProducts = updatedCart.length;
 
-            return {
-              listCart: updatedCart,
-              products: {
-                totalAmount: updatedTotalAmount,
-                totalProducts: updatedTotalProducts,
-              },
-            };
+              return {
+                listCart: updatedCart,
+                products: {
+                  totalAmount: updatedTotalAmount,
+                  totalProducts: updatedTotalProducts,
+                },
+              }
+            }
+            return state
           }),
+
+
 
         removeProduct: (id) =>
           set((state) => {
@@ -58,10 +69,9 @@ export const useCartStore = create<CartState>()(
                 totalProducts: updatedTotalProducts,
               },
             };
-          }),
+        }),
 
-        checkProductInList: (product) =>
-          get().listCart.some((element) => element.id === product.id),
+        checkProductInList: (product) =>get().listCart.some((element) => element.id === product.id),
       }),
       {
         name: 'cartStore',
