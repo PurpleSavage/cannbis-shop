@@ -6,3 +6,10 @@
 .radialGradient{
     background: radial-gradient(128% 107% at 0% 0%, #292929 0%, rgb(0, 0, 0) 77.61472409909909%);
 }
+
+.buttonAddtoCart{
+    background: radial-gradient(128% 107% at 0% 0%, #292929 0%, rgb(0, 0, 0) 77.61472409909909%);
+}
+.buttonAddtoCart:hover{
+    background: radial-gradient(50% 50% at 50% 0%, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
+}

@@ -15,4 +15,3 @@ export interface VapeProductI extends ProductI{
     description:string
 }
 
-export type CartProduct = CannabisProductI | VapeProductI

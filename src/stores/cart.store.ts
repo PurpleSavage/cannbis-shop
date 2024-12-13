@@ -1,31 +1,72 @@
-import { create } from 'zustand'
-import { devtools, persist } from 'zustand/middleware'
-import { type CartProduct } from '@/models/product.model'
-interface BearState {
-  listCart: CartProduct[]
-  addToCart: (product:CartProduct) => void
-  getTotalAmount:()=>number
-  removeProduct:(id:string)=>void
-  totalProducts:()=>number
-  checkProductInList:(product:CartProduct)=>boolean
+'use client'
+import { create } from 'zustand';
+import { devtools, persist, createJSONStorage } from 'zustand/middleware';
+import { type CartProduct } from '@/models/cartproduct.model';
+
+interface CartState {
+  listCart: CartProduct[];
+  products: {
+    totalAmount: number;
+    totalProducts: number;
+  };
+
+  addToCart: (product: CartProduct) => void;
+  removeProduct: (id: string) => void;
+  checkProductInList: (product: CartProduct) => boolean;
+  getTotalAmount:(list:CartProduct[])=>number
 }
 
-export const useBearStore = create<BearState>()(
+export const useCartStore = create<CartState>()(
   devtools(
     persist(
-      (set,get) => ({
+      (set, get) => ({
         listCart: [],
-        addToCart: (product) => set((state) => ({ listCart:[...state.listCart,product] })),
+        products: {
+          totalAmount: 0,
+          totalProducts: 0,
+        },
+        getTotalAmount:(list)=>{
+          return list.reduce((total, item)=>total+item.price,0)
+        },
+        addToCart: (product) =>
+          set((state) => {
+            const updatedCart = [...state.listCart, {...product,quantity:0}];
+            const updatedTotalAmount = get().getTotalAmount(updatedCart);
+            const updatedTotalProducts = updatedCart.length;
 
-        getTotalAmount:()=>get().listCart.reduce((total, product) => total + product.price, 0),
+            return {
+              listCart: updatedCart,
+              products: {
+                totalAmount: updatedTotalAmount,
+                totalProducts: updatedTotalProducts,
+              },
+            };
+          }),
 
-        removeProduct:(id)=>set((state)=>({listCart:state.listCart.filter(product =>product.id && product.id !== id) })),
+        removeProduct: (id) =>
+          set((state) => {
+            const updatedCart = state.listCart.filter(
+              (product) => product.id && product.id !== id 
+            );
+            const updatedTotalAmount = get().getTotalAmount(updatedCart);
+            const updatedTotalProducts = updatedCart.length;
 
-        totalProducts:()=>get().listCart.length,
+            return {
+              listCart: updatedCart,
+              products: {
+                totalAmount: updatedTotalAmount,
+                totalProducts: updatedTotalProducts,
+              },
+            };
+          }),
 
-        checkProductInList:(product)=>get().listCart.some(element =>element.id ===product.id),
+        checkProductInList: (product) =>
+          get().listCart.some((element) => element.id === product.id),
       }),
-      { name: 'cartStore' },
-    ),
-  ),
-)
+      {
+        name: 'cartStore',
+        storage: createJSONStorage(() => sessionStorage),
+      }
+    )
+  )
+);
