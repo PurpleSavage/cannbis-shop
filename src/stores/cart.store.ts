@@ -2,7 +2,7 @@
 import { create } from 'zustand';
 import { devtools, persist, createJSONStorage } from 'zustand/middleware';
 import { type CartProduct } from '@/models/cartproduct.model';
-
+import { CartActions } from '@/models/cartproduct.model';
 interface CartState {
   listCart: CartProduct[];
   products: {
@@ -13,7 +13,9 @@ interface CartState {
   addToCart: (product: CartProduct) => void;
   removeProduct: (id: string) => void;
   checkProductInList: (product: CartProduct) => boolean;
-  getTotalAmount:(list:CartProduct[])=>number
+  getTotalAmount:(list:CartProduct[])=>number;
+  addQuantity:(product:CartProduct,action:CartActions)=>void
+  getTotalProducts:(list:CartProduct[])=>number
 }
 
 export const useCartStore = create<CartState>()(
@@ -29,17 +31,20 @@ export const useCartStore = create<CartState>()(
 
 
         getTotalAmount:(list)=>{
-          return list.reduce((total, item)=>total+item.price,0)
+          return list.reduce((total, item)=>total+item.price,1)
         },
 
-
+        getTotalProducts:(list)=>{
+        
+          return list.reduce((total,item)=>total+item.quantity,1)
+        },
         addToCart: (product) =>
           set((state) => {
             const porductExist = get().checkProductInList(product)
             if(!porductExist){
               const updatedCart = [...state.listCart, product];
               const updatedTotalAmount = get().getTotalAmount(updatedCart);
-              const updatedTotalProducts = updatedCart.length;
+              const updatedTotalProducts = get().getTotalProducts(updatedCart)
 
               return {
                 listCart: updatedCart,
@@ -53,7 +58,35 @@ export const useCartStore = create<CartState>()(
           }),
 
 
-
+        addQuantity:(product,action)=>set((state)=>{
+          let newList:CartProduct[]
+          if(action==='@increase'){
+            newList=get().listCart.map(item=>{
+              if(item.id===product.id){
+                return { ...item, quantity: item.quantity + 1 };
+              }
+              return item
+            })
+          }else if(action==='@decrease'){
+            newList=get().listCart.map(item=>{
+              if(item.id===product.id && item.quantity>1){
+                return { ...item, quantity: item.quantity - 1 };
+              }
+              return item
+            })
+          }else{
+            newList = state.listCart;
+          }
+          const updatedTotalAmount = get().getTotalAmount(newList);
+          const updatedTotalProducts =  get().getTotalProducts(newList)
+          return {
+            listCart: newList, 
+            products: {
+              totalAmount: updatedTotalAmount, 
+              totalProducts: updatedTotalProducts, 
+            },
+          }
+        }),
         removeProduct: (id) =>
           set((state) => {
             const updatedCart = state.listCart.filter(

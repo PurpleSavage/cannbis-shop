@@ -33,7 +33,7 @@ export default function Model3d() {
 
     // Cargar textura
     const textureLoader = new THREE.TextureLoader();
-    const texture = textureLoader.load("/3d/textures/bud_u1_v1.jpg", () => {
+    const texture = textureLoader.load("/3d/textures/bud.jpg", () => {
       console.log("Textura cargada");
     });
 
@@ -70,7 +70,7 @@ export default function Model3d() {
 
     // Posicionar la cámara
     camera.position.z = 2;
-    camera.position.x = -1; // Mover hacia la derecha (valores positivos) o izquierda (valores negativos)
+    camera.position.x = -1; 
     camera.position.y = 1; 
 
     // Animar la escena
