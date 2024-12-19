@@ -10,10 +10,11 @@ interface CardOrderProps{
 }
 export default function CardOrder({product}:CardOrderProps) {
   const addQuantity = useCartStore(state=>state.addQuantity)
+  const removeProduct = useCartStore(state=>state.removeProduct)
   return (
     <div className={`${styles.radialGradient} p-4 border border-slate-600/50 rounded-lg w-3/5`}>
       <div className="flex">
-        <div className="w-1/2 space-y-4">
+        <div className="w-1/2 flex flex-col justify-between">
           <span className="block text-xl">Product: {product.title}</span>
           <span className="block text-lg">Category: {product.category}</span>
           <span className="block text-lg">Price: {product.price}</span> 
@@ -37,9 +38,14 @@ export default function CardOrder({product}:CardOrderProps) {
               </button>
             </div>
           </div>
+          <div className="w-full px-2">
+            <button className={`px-5 flex items-center justify-center text-md text-white
+            border border-slate-500/50 rounded-lg ${styles.radialGradient} py-2
+             hover:border-slate-800 hover:text-slate-400`} onClick={()=>removeProduct(product.id)}>remove product</button>
+          </div>
         </div>
         <div className="w-1/2 flex items-center justify-center">
-          <img src={product.url} className="w-[200px]" alt={`image ${product.title}`} />
+          <img src={product.url} className="w-full " alt={`image ${product.title}`} />
         </div>
       </div>
     </div>
